@@ -1,8 +1,8 @@
-import { chat } from 'ollama'
+import  ollama  from 'ollama'
 
 async function chatWithOllama(modelName, promptText) {
   try {
-    const response = await chat({
+    const response = await ollama.chat({
       model: modelName,
       messages: [{ role: 'user', content: promptText }],
     })
